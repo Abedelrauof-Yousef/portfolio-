@@ -18,7 +18,7 @@
 
     #header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       background-color: #F57D1F;
       width: 100%;
@@ -28,9 +28,10 @@
       left: 0;
       right: 0;
       z-index: 1;
+      padding: 40px;
     }
 
-    h2{
+    .heading2HeroSection{
       color: #F57D1F;
     }
 
@@ -39,12 +40,34 @@
       width: 45px;
       border-radius: 50%;
       margin-top: 5px;
-      margin-right: 50px;
-      padding-bottom: 5px;
     }
 
-    .h5AndParagraph{
+    .heading2AboutMe{
+      width: auto;
+      margin-top: 400px;
+      padding-top: 100PX;
       transition: 0.5s;
+      box-shadow: 5px 10px 10px 0 #F57D1F;
+      border-radius: 10%;
+    }
+
+    #AboutMeSection{
+      text-align: center;
+      color: #F57D1F;
+      transition: 0.3s;
+    }
+
+    #AboutMeParagraph{
+      font-size: large;
+      height: 400px;
+      width: 400px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .DivAboutMe{
+      display: flex;
+      justify-content: center;
     }
 
     li {
@@ -67,40 +90,47 @@
       width: 400px;
       height: auto;
       padding-left: 50px;
-      margin-left: 50px;
+      margin-left: 70px;
       border-radius: 40%;
       border: none;
       box-shadow: 5px 10px 10px 0 #F57D1F;
-      margin-top: 60px;
+      margin-top: 150px;
     }
 
     .col1 {
       text-align: center;
       padding-top: 10%;
+      margin-top: 150px;
     }
 
     .SkillsContainer{
-      margin-top: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+      align-items: center;
+      margin-top: 300px;
+      box-shadow: 10px 10px 10px 10px #F57D1F;
+      border-radius: 10%;
+      padding: 40px;
+      gap: 20px;
     }
 
+    
+
     .col2 {
-      margin-left: 140px;
-      margin-top: 34px;
       background-color: black;
       color: white;
       transition: 0.5s;
     }
 
     .col3 {
-      margin: 50px;
-      margin-left: 50px;
       background-color: black;
       color: white;
       transition: 0.5s;
     }
     
     .col4 {
-      margin-left: 50px;
       background-color: black;
       color: white;
       transition: 0.5s;
@@ -141,9 +171,9 @@
       margin-top: 250px;
     }
 
-    .h3Contact{
+    /* .h3Contact{
       animation: colorChange 4s infinite, moveText 4s infinite;
-    }
+    } */
 
     #input[type=text], select, textarea {
       width: 100%;
@@ -219,13 +249,7 @@
       color: black;
     }
 
-    .h5AndParagraph:hover{
-      transform: translateY(-50px);
-      box-shadow: 5px 10px 10px 0 #F57D1F;
-      border-radius: 10%;
-    }
-
-    @keyframes colorChange{
+    /* @keyframes colorChange{
       0% {
         color: #F57D1F;
       }
@@ -250,7 +274,7 @@
       50% {
         transform: translateY(-100px);
       }
-    }
+    } */
 
     
 
@@ -315,19 +339,266 @@
       .navItems.active{
         left: 0;
       }
-
-
     }
 
+    .Education{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      transition: 0.5s;
+      padding-top: 100px;
+    }
+
+    .Education2{
+      background-color: black;
+      border-style: none;
+      font-size: larger;
+      padding: 20px;
+    }
+
+    .Education3{
+      color: #F57D1F;
+      font-size: xx-large;
+    }
+
+    .Education4{
+      color: white;
+    }
+
+    .Education:hover{
+      transform: translateY(-50px);
+      box-shadow: 4px 7px 7px 0 #F57D1F;
+    }
     
+    @media (max-width: 480px) {
+  .heading2AboutMe {
+    margin-top: 100px;
+    padding-top: 50px;
+  }
+
+  #AboutMeParagraph {
+    height: auto;
+    width: 90%;
+    margin: auto;
+  }
+
+  .heroSectionPicture {
+    width: 90%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 50px;
+  }
+
+  .SkillsContainer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .SkillsContainer .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ContactContainer1 {
+    flex-direction: column;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 90%;
+    margin: auto;
+  }
+
+  #header {
+    padding: 20px;
+  }
+}
 
 
+@media (min-width: 481px) and (max-width: 768px) {
+  .heading2AboutMe {
+    margin-top: 200px;
+    padding-top: 50px;
+  }
 
+  #AboutMeParagraph {
+    height: auto;
+    width: 80%;
+    margin: auto;
+  }
+
+  .heroSectionPicture {
+    width: 70%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 50px;
+  }
+
+  .SkillsContainer {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .SkillsContainer .col {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ContactContainer1 {
+    flex-direction: column;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 80%;
+    margin: auto;
+  }
+
+  #header {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .heading2AboutMe {
+    margin-top: 300px;
+    padding-top: 70px;
+  }
+
+  #AboutMeParagraph {
+    height: auto;
+    width: 70%;
+    margin: auto;
+  }
+
+  .heroSectionPicture {
+    width: 60%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 70px;
+  }
+
+  .SkillsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .SkillsContainer .col {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .ContactContainer1 {
+    flex-direction: row;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 45%;
+  }
+
+  #header {
+    padding: 40px;
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .heading2AboutMe {
+    margin-top: 350px;
+    padding-top: 80px;
+  }
+
+  #AboutMeParagraph {
+    height: auto;
+    width: 60%;
+    margin: auto;
+  }
+
+  .heroSectionPicture {
+    width: 50%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 80px;
+  }
+
+  .SkillsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .SkillsContainer .col {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  .ContactContainer1 {
+    flex-direction: row;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 45%;
+  }
+
+  #header {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .heading2AboutMe {
+    margin-top: 400px;
+    padding-top: 100px;
+  }
+
+  #AboutMeParagraph {
+    height: auto;
+    width: 50%;
+    margin: auto;
+  }
+
+  .heroSectionPicture {
+    width: 40%;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 100px;
+  }
+
+  .SkillsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .SkillsContainer .col {
+    width: 25%;
+    margin-bottom: 20px;
+  }
+
+  .ContactContainer1 {
+    flex-direction: row;
+  }
+
+  .formContainer,
+  .contactDetails {
+    width: 40%;
+  }
+
+  #header {
+    padding: 40px;
+  }
+}
 
     
   </style>
 </head>
 <body>
+  <div id="home"></div>
   <!-- navBar Section -->
   <div id="header"> 
     <img src="https://cdn-icons-png.flaticon.com/512/3096/3096983.png" class="Logo" alt="Logo">
@@ -335,6 +606,7 @@
       <li class="navItem"><a href="#home" class="item-link">Home</a></li>
       <li class="navItem"><a href="#AboutMe" class="item-link">About me</a></li>
       <li class="navItem"><a href="#Skills" class="item-link">Skills</a></li>
+      <li class="navItem"><a href="#Education" class="item-link">Education</a></li>
       <li class="navItem"><a href="#Contact" class="item-link">Contact</a></li>
     </ul>
     <div class="hamburger">
@@ -349,13 +621,9 @@
     <div class="row">
       <div class="col1 col-sm">
         <h1>Hi, I'm Abedelra'uof</h1>
-        <h2>I'm a Full Stack Developer</h2>
-        <h4 id="AboutMe">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</h4>
+        <h2 class="heading2HeroSection">I'm a Full Stack Developer</h2>
+        <h4 >𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</h4>
         <br><br><br>
-        <div class="h5AndParagraph">
-        <h5>About me</h5>
-        <div class="d-flex p-2">Passionate about blending creativity with logic, I bring a unique perspective to problem-solving. With a background in Logistics and Supply Chain Management, I understand the complexities of efficient operations. Now, I am channeling my innovative spirit into programming. I am eager to combine my analytical skills and creativity to develop software solutions that are both functional and aesthetically pleasing.</div>
-        </div>
       </div>
       <div class="Col2Picture col-sm">
         <img class="heroSectionPicture" src="Images/Picture2-nobg.png" alt="Hero Section Picture">
@@ -363,58 +631,68 @@
     </div>
   </div> 
 
+
+
+  <div id="AboutMe" class="heading2AboutMe">
+    <h2 id="AboutMeSection">About Me</h2>
+    <div class="DivAboutMe">
+    <p id="AboutMeParagraph">Passionate about blending creativity with logic, I bring a unique perspective to problem-solving. With a background in Logistics and Supply Chain Management, I understand the complexities of efficient operations. Now, I am channeling my innovative spirit into programming. I am eager to combine my analytical skills and creativity to develop software solutions that are both functional and aesthetically pleasing.</p>
+    </div>
+  </div>
+
+
+
+
+
   <!-- Skills cards Section -->
+
   <div id="Skills" class="SkillsContainer container text-center">
     <br><br><br><br>
-    <div class="row2 row">
-      <div class="htmlCol2 col">
-        <div class="col2 card" style="width: 18rem;">
-          <img src="https://cdn-icons-png.freepik.com/512/5968/5968333.png" class="card-img-top" alt="HTML Logo">
-          <div class="card-body">
-            <p class="card-text">The backbone of web development, HTML (Hypertext Markup Language) structures the content on the web. It allows for the creation of paragraphs, links, images, and more, serving as the skeleton of web pages.</p>
-            <a href="https://github.com/Abedelrauof-Yousef/HTML-Task.git" class="CardButton btn" target="_blank">See My Work</a>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="col3 card" style="width: 18rem;">
-          <img src="https://cdn-icons-png.freepik.com/512/5968/5968305.png" class="card-img-top" alt="CSS Logo">
-          <div class="card-body">
-            <p class="card-text">CSS (Cascading Style Sheets) brings style to the web. It allows for the customization of web page appearances, including layouts, colors, and fonts, making websites visually appealing and user-friendly.</p>
-            <a href="https://github.com/Abedelrauof-Yousef/Bootstrap.git" class="CardButton btn" target="_blank">See My Work</a>
-          </div>
+    <div class="col col-3">
+      <div class="col2 card" style="width: 18rem;">
+        <img src="https://cdn-icons-png.freepik.com/512/5968/5968333.png" class="card-img-top" alt="HTML Logo">
+        <div class="card-body">
+          <p class="card-text">The backbone of web development, HTML (Hypertext Markup Language) structures the content on the web. It allows for the creation of paragraphs, links, images, and more, serving as the skeleton of web pages.</p>
+          <a href="https://github.com/Abedelrauof-Yousef/HTML-Task.git" class="CardButton btn" target="_blank">See My Work</a>
         </div>
       </div>
     </div>
-    <div class="row3 row">
-      <div class="col">
-        <div class="col4 card" style="width: 18rem;">
-          <img src="https://static.vecteezy.com/system/resources/previews/012/194/385/original/js-letter-logo-design-with-black-background-in-illustrator-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" class="card-img-top" alt="JavaScript Logo">
-          <div class="card-body">
-            <h5 class="card-title">JavaScript</h5>
-            <p class="card-text">JavaScript adds interactivity to web pages. As a versatile programming language, it enables dynamic content, control of multimedia, and complex web features, enhancing the user experience significantly.</p>
-            <a href="#" class="CardButton btn">See My Work</a>
-          </div>
+    <div class="col col-3">
+      <div class="col3 card" style="width: 18rem;">
+        <img src="https://cdn-icons-png.freepik.com/512/5968/5968305.png" class="card-img-top" alt="CSS Logo">
+        <div class="card-body">
+          <p class="card-text">CSS (Cascading Style Sheets) brings style to the web. It allows for the customization of web page appearances, including layouts, colors, and fonts, making websites visually appealing and user-friendly.</p>
+          <a href="https://github.com/Abedelrauof-Yousef/Bootstrap.git" class="CardButton btn" target="_blank">See My Work</a>
         </div>
       </div>
-      <div class="col">
-        <div class="col5 card" style="width: 18rem;">
-          <img src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-black-and-white.png" class="card-img-top" height="275px" alt="React Logo">
-          <div class="card-body">
-            <h5 class="card-title">React</h5>
-            <p class="card-text">React is a powerful JavaScript library for building user interfaces, particularly single-page applications. It facilitates the creation of reusable UI components and ensures efficient rendering, making web apps fast and scalable.</p>
-            <a href="#" class="CardButton btn">See My Work</a>
-          </div>
+    </div>
+    <div class="col col-3">
+      <div class="col4 card" style="width: 18rem;">
+        <img src="https://static.vecteezy.com/system/resources/previews/012/194/385/original/js-letter-logo-design-with-black-background-in-illustrator-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" class="card-img-top" alt="JavaScript Logo">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript</h5>
+          <p class="card-text">JavaScript adds interactivity to web pages. As a versatile programming language, it enables dynamic content, control of multimedia, and complex web features, enhancing the user experience significantly.</p>
+          <a href="#" class="CardButton btn">See My Work</a>
         </div>
       </div>
-      <div class="col">
-        <div class="col6 card" style="width: 18rem;">
-          <img src="https://icon-library.com/images/node-js-icon/node-js-icon-2.jpg" class="card-img-top" alt="Node.js Logo">
-          <div class="card-body">
-            <h5 class="card-title">Node.js</h5>
-            <p class="card-text">Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing for server-side scripting. It enables the creation of scalable network applications, making it ideal for real-time applications and API services.</p>
-            <a href="#" class="CardButton btn">See My Work</a>
-          </div>
+    </div>
+    <div class="col col-3">
+      <div class="col5 card" style="width: 18rem;">
+        <img src="Images/React logo small.png" class="card-img-top" alt="React Logo">
+        <div class="card-body">
+          <h5 class="card-title">React</h5>
+          <p class="card-text">React is a powerful JavaScript library for building user interfaces, particularly single-page applications. It facilitates the creation of reusable UI components and ensures efficient rendering, making web apps fast and scalable.</p>
+          <a href="#" class="CardButton btn">See My Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="col col-3">
+      <div class="col6 card" style="width: 18rem;">
+        <img src="https://icon-library.com/images/node-js-icon/node-js-icon-2.jpg" class="card-img-top" alt="Node.js Logo">
+        <div class="card-body">
+          <h5 class="card-title">Node.js</h5>
+          <p class="card-text">Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing for server-side scripting. It enables the creation of scalable network applications, making it ideal for real-time applications and API services.</p>
+          <a href="#" class="CardButton btn">See My Work</a>
         </div>
       </div>
     </div>
@@ -422,17 +700,27 @@
 
   <br><br><br><br><br><br><br><br>
 
+  <!-- Education Section -->
+  <div id="Education" class="Education">
+    <div style="width: 18rem;">
+      <div class="Education2 card-body">
+        <h5 class="Education3 card-title">Education</h5>
+        <p class="Education4 card-text">Luminous Technical University College, an internationally accredited Diploma in Logistics granted by Pearson - United Kingdom, FullStack Developer Graduated from Orange Digital Village</p>
+      </div>
+    </div>
+  </div>
+
   <!-- Contact Section -->
   
   <div class="ContactContainer1">
-    <h3 id="Contact" class="h3Contact">Contact Me</h3> 
+    <h3 id="Contact" class="h3Contact"></h3> 
     <form class="formContainer">
-      <label for="firstName">First Name</label>
+      <label for="firstName"></label>
       <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br> 
-      <label for="lastName">Last Name</label>
+      <label for="lastName"></label>
       <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
-      <label for="phoneNumber">Phone Number</label>
-      <input type="tel" id="telNumber" name="telNumber" placeholder="+962788888888"><br><br>
+      <label for="phoneNumber"></label>
+      <input type="tel" id="telNumber" name="telNumber" placeholder="Phone Number"><br><br>
       <label for="subject">Message</label>
       <textarea id="subject" name="subject" placeholder="Write Here" style="height:200px"></textarea>
       <input type="submit" value="Submit">
