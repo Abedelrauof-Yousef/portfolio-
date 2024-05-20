@@ -7,7 +7,7 @@
   <title>Document</title>
   <style>
     body {
-      background-color: #080808;
+      background-color: black;
       color: white;
     }
 
@@ -20,14 +20,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #6F6D6E;
+      background-color: #F57D1F;
       width: 100%;
-      height: 50px;
+      height: 60px;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 1;
+    }
+
+    h2{
+      color: #F57D1F;
     }
 
     .Logo {
@@ -39,16 +43,24 @@
       padding-bottom: 5px;
     }
 
+    .h5AndParagraph{
+      transition: 0.5s;
+    }
+
     li {
       display: inline-block;
       padding: 10px 10px;
       font-size: x-large;
-      text-decoration: underline;
     }
 
     ul li a {
       font-weight: bold;
       color: black;
+      padding: 16px 32px;
+      font-size: 24px;
+      margin: 4px 2px;
+      text-decoration: none;
+      transition: 0.3s;
     }
 
     .heroSectionPicture {
@@ -58,7 +70,7 @@
       margin-left: 50px;
       border-radius: 40%;
       border: none;
-      box-shadow: 5px 10px 10px 0 #6F6D6E;
+      box-shadow: 5px 10px 10px 0 #F57D1F;
       margin-top: 60px;
     }
 
@@ -67,11 +79,16 @@
       padding-top: 10%;
     }
 
+    .SkillsContainer{
+      margin-top: 250px;
+    }
+
     .col2 {
       margin-left: 140px;
       margin-top: 34px;
       background-color: black;
       color: white;
+      transition: 0.5s;
     }
 
     .col3 {
@@ -79,22 +96,26 @@
       margin-left: 50px;
       background-color: black;
       color: white;
+      transition: 0.5s;
     }
-
+    
     .col4 {
       margin-left: 50px;
       background-color: black;
       color: white;
+      transition: 0.5s;
     }
 
     .col5 {
       background-color: black;
       color: white;
+      transition: 0.5s;
     }
 
     .col6 {
       background-color: black;
       color: white;
+      transition: 0.5s;
     }
 
     .htmlCol2 {
@@ -111,12 +132,17 @@
     }
 
     .ContactContainer1 {
-      padding: 20px;
-      border-radius: 10px;
-      background-color: black;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: black;
+      margin-top: 250px;
+    }
+
+    .h3Contact{
+      animation: colorChange 4s infinite, moveText 4s infinite;
     }
 
     #input[type=text], select, textarea {
@@ -151,40 +177,185 @@
       margin-bottom: 10px;
     }
 
+    .h4ContactDetails{
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
     .socialMedia {
       display: flex;
       gap: 10px;
       margin-top: 20px;
+      margin-left: 12px;
     }
 
     .socialMedia img {
       width: 40px;
       height: 40px;
     }
+
+    .copyRight, .copyRight2{
+      color: black;
+      background-color: #F57D1F;
+    }
+
+    /* Animation and Transicion Section */
+
+    ul li a:hover{
+      background-color: #EBF400;
+      border-radius: 50%;
+      padding: 20px 25px;
+    }
+
+    .CardButton{
+      background-color: #F57D1F;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    .CardButton:hover{
+      background-color: #F57D1F;
+      opacity: 1;
+      color: black;
+    }
+
+    .h5AndParagraph:hover{
+      transform: translateY(-50px);
+      box-shadow: 5px 10px 10px 0 #F57D1F;
+      border-radius: 10%;
+    }
+
+    @keyframes colorChange{
+      0% {
+        color: #F57D1F;
+      }
+      25% {
+        color: #EBF400;
+      }
+      50% {
+        color: #F57D1F;
+      }
+      75% {
+        color: #EBF400;
+      }
+      100% {
+        color: #F57D1F;
+      }
+    }
+
+    @keyframes moveText {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-100px);
+      }
+    }
+
+    
+
+    .col2:hover, .col3:hover, .col4:hover, .col5:hover, .col6:hover{
+      transform: translateY(-50px);
+      box-shadow: 4px 7px 7px 0 #F57D1F;
+    }
+
+    .h4ContactDetails::first-letter{
+      color: #F57D1F;
+      font-size: xx-large;
+    }
+
+    .hamburger{
+      display: none;
+      cursor: pointer;
+    }
+
+    .bar{
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: black;
+    }
+
+    @media(max-width:768px){
+      .hamburger{
+        display: block;
+      }
+
+      .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .navItems {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #F57D1F;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .navItem{
+        margin: 16px 0;
+      }
+
+      .navItems.active{
+        left: 0;
+      }
+
+
+    }
+
+    
+
+
+
+
+    
   </style>
 </head>
 <body>
   <!-- navBar Section -->
   <div id="header"> 
     <img src="https://cdn-icons-png.flaticon.com/512/3096/3096983.png" class="Logo" alt="Logo">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#AboutMe">About me</a></li>
-      <li><a href="#Skills">Skills</a></li>
-      <li><a href="#Contact">Contact</a></li>
+    <ul class="navItems">
+      <li class="navItem"><a href="#home" class="item-link">Home</a></li>
+      <li class="navItem"><a href="#AboutMe" class="item-link">About me</a></li>
+      <li class="navItem"><a href="#Skills" class="item-link">Skills</a></li>
+      <li class="navItem"><a href="#Contact" class="item-link">Contact</a></li>
     </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
   </div>
 
   <!-- grid table with two columns + About Me Section -->
   <div class="container">
     <div class="row">
       <div class="col1 col-sm">
-        <h1>Hi I'm Abedelra'uof</h1>
-        <h3>I'm a Web Developer</h3>
+        <h1>Hi, I'm Abedelra'uof</h1>
+        <h2>I'm a Full Stack Developer</h2>
         <h4 id="AboutMe">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</h4>
         <br><br><br>
+        <div class="h5AndParagraph">
         <h5>About me</h5>
         <div class="d-flex p-2">Passionate about blending creativity with logic, I bring a unique perspective to problem-solving. With a background in Logistics and Supply Chain Management, I understand the complexities of efficient operations. Now, I am channeling my innovative spirit into programming. I am eager to combine my analytical skills and creativity to develop software solutions that are both functional and aesthetically pleasing.</div>
+        </div>
       </div>
       <div class="Col2Picture col-sm">
         <img class="heroSectionPicture" src="Images/Picture2-nobg.png" alt="Hero Section Picture">
@@ -193,7 +364,7 @@
   </div> 
 
   <!-- Skills cards Section -->
-  <div id="Skills" class="container text-center">
+  <div id="Skills" class="SkillsContainer container text-center">
     <br><br><br><br>
     <div class="row2 row">
       <div class="htmlCol2 col">
@@ -201,7 +372,7 @@
           <img src="https://cdn-icons-png.freepik.com/512/5968/5968333.png" class="card-img-top" alt="HTML Logo">
           <div class="card-body">
             <p class="card-text">The backbone of web development, HTML (Hypertext Markup Language) structures the content on the web. It allows for the creation of paragraphs, links, images, and more, serving as the skeleton of web pages.</p>
-            <a href="https://github.com/Abedelrauof-Yousef/HTML-Task.git" class="btn btn-primary" target="_blank">See My Work</a>
+            <a href="https://github.com/Abedelrauof-Yousef/HTML-Task.git" class="CardButton btn" target="_blank">See My Work</a>
           </div>
         </div>
       </div>
@@ -210,7 +381,7 @@
           <img src="https://cdn-icons-png.freepik.com/512/5968/5968305.png" class="card-img-top" alt="CSS Logo">
           <div class="card-body">
             <p class="card-text">CSS (Cascading Style Sheets) brings style to the web. It allows for the customization of web page appearances, including layouts, colors, and fonts, making websites visually appealing and user-friendly.</p>
-            <a href="https://github.com/Abedelrauof-Yousef/Bootstrap.git" class="btn btn-primary" target="_blank">See My Work</a>
+            <a href="https://github.com/Abedelrauof-Yousef/Bootstrap.git" class="CardButton btn" target="_blank">See My Work</a>
           </div>
         </div>
       </div>
@@ -222,7 +393,7 @@
           <div class="card-body">
             <h5 class="card-title">JavaScript</h5>
             <p class="card-text">JavaScript adds interactivity to web pages. As a versatile programming language, it enables dynamic content, control of multimedia, and complex web features, enhancing the user experience significantly.</p>
-            <a href="#" class="btn btn-primary">See My Work</a>
+            <a href="#" class="CardButton btn">See My Work</a>
           </div>
         </div>
       </div>
@@ -232,7 +403,7 @@
           <div class="card-body">
             <h5 class="card-title">React</h5>
             <p class="card-text">React is a powerful JavaScript library for building user interfaces, particularly single-page applications. It facilitates the creation of reusable UI components and ensures efficient rendering, making web apps fast and scalable.</p>
-            <a href="#" class="btn btn-primary">See My Work</a>
+            <a href="#" class="CardButton btn">See My Work</a>
           </div>
         </div>
       </div>
@@ -242,7 +413,7 @@
           <div class="card-body">
             <h5 class="card-title">Node.js</h5>
             <p class="card-text">Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing for server-side scripting. It enables the creation of scalable network applications, making it ideal for real-time applications and API services.</p>
-            <a href="#" class="btn btn-primary">See My Work</a>
+            <a href="#" class="CardButton btn">See My Work</a>
           </div>
         </div>
       </div>
@@ -252,12 +423,13 @@
   <br><br><br><br><br><br><br><br>
 
   <!-- Contact Section -->
-  <h3 id="Contact" class="h3Contant">Contact Me</h3>
+  
   <div class="ContactContainer1">
+    <h3 id="Contact" class="h3Contact">Contact Me</h3> 
     <form class="formContainer">
-      <label for="firstName">Name</label>
+      <label for="firstName">First Name</label>
       <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br> 
-      <label for="lastName">Second Name</label>
+      <label for="lastName">Last Name</label>
       <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
       <label for="phoneNumber">Phone Number</label>
       <input type="tel" id="telNumber" name="telNumber" placeholder="+962788888888"><br><br>
@@ -266,7 +438,7 @@
       <input type="submit" value="Submit">
     </form>
     <div class="contactDetails">
-      <h4>Reach me</h4>
+      <h4 class="h4ContactDetails"><strong>Reach me</strong></h4>
       <ul>
         <li>Mobile Number: +962786000975</li>
         <li>Email: abedelrauofyousef@gmail.com</li>
@@ -282,7 +454,31 @@
       </div>
     </div>
   </div>
+
+
+  <!-- Footer Section -->
+  <footer class="copyRight bg-body-tertiary text-center text-lg-start">
+    <div class="copyRight2 text-center p-3">
+      © 2020 Copyright:
+      <a class="text-body">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</a>
+    </div>
+  </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navItems = document.querySelector(".navItems");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navItems.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".item-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navItems.classList.remove("active");
+    })) 
+  
+  </script>
 </body>
 </html>
