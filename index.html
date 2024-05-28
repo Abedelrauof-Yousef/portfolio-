@@ -1,255 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <title>Document</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-    #header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #F57D1F;
-      width: 100%;
-      height: 60px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      padding: 40px;
-    }
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f57d1f;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        padding: 40px;
+      }
 
-    .heading2HeroSection{
-      color: #F57D1F;
-    }
+      .heading2HeroSection {
+        color: #f57d1f;
+      }
 
-    .Logo {
-      height: 45px;
-      width: 45px;
-      border-radius: 50%;
-      margin-top: 5px;
-    }
+      .Logo {
+        color: black;
+        font-size: x-large;
+        margin-bottom: 10px;
+        text-decoration: none;
+      }
 
-    .heading2AboutMe{
-      width: auto;
-      margin-top: 400px;
-      padding-top: 100PX;
-      transition: 0.5s;
+      .heading2AboutMe {
+        width: auto;
+        margin-top: 200px;
+        padding-top: 100px;
+        /* transition: 0.5s;
       box-shadow: 5px 10px 10px 0 #F57D1F;
-      border-radius: 10%;
-    }
+      border-radius: 10%; */
+      }
 
-    #AboutMeSection{
-      text-align: center;
-      color: #F57D1F;
-      transition: 0.3s;
-    }
+      #AboutMeSection {
+        text-align: center;
+        color: #f57d1f;
+        transition: 0.3s;
+      }
 
-    #AboutMeParagraph{
-      font-size: large;
-      height: 400px;
-      width: 400px;
-      text-align: center;
-      transition: 0.3s;
-    }
+      #AboutMeParagraph {
+        font-size: large;
+        height: 400px;
+        width: 400px;
+        text-align: center;
+        transition: 0.3s;
+      }
 
-    .DivAboutMe{
-      display: flex;
-      justify-content: center;
-    }
+      .DivAboutMe {
+        display: flex;
+        justify-content: center;
+      }
 
-    li {
-      display: inline-block;
-      padding: 10px 10px;
-      font-size: x-large;
-    }
+      li {
+        display: inline-block;
+        padding: 10px 10px;
+        font-size: x-large;
+      }
 
-    ul li a {
-      font-weight: bold;
-      color: black;
-      padding: 16px 32px;
-      font-size: 24px;
-      margin: 4px 2px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+      ul li a {
+        font-weight: bold;
+        color: black;
+        padding: 16px 32px;
+        font-size: 24px;
+        margin: 4px 2px;
+        text-decoration: none;
+        /* transition: 0.3s; */
+      }
 
-    .heroSectionPicture {
-      width: 400px;
-      height: auto;
-      padding-left: 50px;
-      margin-left: 70px;
-      border-radius: 40%;
-      border: none;
-      box-shadow: 5px 10px 10px 0 #F57D1F;
-      margin-top: 150px;
-    }
+      .heroSectionPicture {
+        width: 400px;
+        height: auto;
+        padding-left: 50px;
+        margin-left: 70px;
+        border-radius: 40%;
+        border: none;
+        box-shadow: 5px 10px 10px 0 #f57d1f;
+        margin-top: 150px;
+      }
 
-    .col1 {
-      text-align: center;
-      padding-top: 10%;
-      margin-top: 150px;
-    }
+      .col1 {
+        text-align: center;
+        padding-top: 15%;
+        margin-top: 150px;
+      }
 
-    .SkillsContainer{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      text-align: center;
-      align-items: center;
-      margin-top: 300px;
-      box-shadow: 10px 10px 10px 10px #F57D1F;
-      border-radius: 10%;
-      padding: 40px;
-      gap: 20px;
-    }
+      .SkillsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        margin-top: 300px;
+        box-shadow: 10px 10px 10px 10px #f57d1f;
+        border-radius: 10%;
+        padding: 40px;
+        gap: 20px;
+      }
 
-    
+      .col2 {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
 
-    .col2 {
-      background-color: black;
-      color: white;
-      transition: 0.5s;
-    }
+      .col3 {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
 
-    .col3 {
-      background-color: black;
-      color: white;
-      transition: 0.5s;
-    }
-    
-    .col4 {
-      background-color: black;
-      color: white;
-      transition: 0.5s;
-    }
+      .col4 {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
 
-    .col5 {
-      background-color: black;
-      color: white;
-      transition: 0.5s;
-    }
+      .col5 {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
 
-    .col6 {
-      background-color: black;
-      color: white;
-      transition: 0.5s;
-    }
+      .col6 {
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+      }
 
-    .htmlCol2 {
-      padding-left: 50px;
-    }
+      .htmlCol2 {
+        padding-left: 50px;
+      }
 
-    .row2 {
-      margin-left: 55px;
-    }
+      .row2 {
+        margin-left: 55px;
+      }
 
-    .row3 {
-      margin-top: 40px;
-      margin-left: 40px;
-    }
+      .row3 {
+        margin-top: 40px;
+        margin-left: 40px;
+      }
 
-    .ContactContainer1 {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: black;
-      margin-top: 250px;
-    }
+      .ContactContainer1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: black;
+        margin-top: 250px;
+      }
 
-    /* .h3Contact{
+      /* .h3Contact{
       animation: colorChange 4s infinite, moveText 4s infinite;
     } */
 
-    #input[type=text], select, textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      box-sizing: border-box;
-      margin-top: 10px;
-      margin-bottom: 16px;
-      resize: vertical;
-    }
+      #input[type="text"], textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
 
-    .formContainer {
-      width: 60%;
-    }
+      .formContainer {
+        width: 60%;
+      }
 
-    .contactDetails {
-      width: 35%;
-    }
+      .contactDetails {
+        width: 35%;
+      }
 
-    .contactDetails h4 {
-      margin-bottom: 10px;
-    }
+      .contactDetails h4 {
+        margin-bottom: 10px;
+      }
 
-    .contactDetails ul {
-      list-style-type: none;
-      padding: 0;
-    }
+      .contactDetails ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-    .contactDetails li {
-      margin-bottom: 10px;
-    }
+      .contactDetails li {
+        margin-bottom: 10px;
+      }
 
-    .h4ContactDetails{
-      margin-left: 10px;
-      font-weight: bold;
-    }
+      .h4ContactDetails {
+        margin-left: 10px;
+        font-weight: bold;
+      }
 
-    .socialMedia {
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-      margin-left: 12px;
-    }
+      .socialMedia {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        margin-left: 12px;
+      }
 
-    .socialMedia img {
-      width: 40px;
-      height: 40px;
-    }
+      .socialMedia img {
+        width: 40px;
+        height: 40px;
+      }
 
-    .copyRight, .copyRight2{
-      color: black;
-      background-color: #F57D1F;
-    }
+      .copyRight,
+      .copyRight2 {
+        color: black;
+        background-color: #f57d1f;
+      }
 
-    /* Animation and Transicion Section */
+      /* Animation and Transicion Section */
 
-    ul li a:hover{
-      background-color: #EBF400;
-      border-radius: 50%;
-      padding: 20px 25px;
-    }
+      /* ul li a:hover {
+        background-color: #ebf400;
+        border-radius: 50%;
+        padding: 20px 25px;
+      } */
 
-    .CardButton{
-      background-color: #F57D1F;
-      opacity: 0.5;
-      transition: 0.3s;
-    }
+      .CardButton {
+        background-color: #f57d1f;
+        opacity: 0.5;
+        transition: 0.3s;
+      }
 
-    .CardButton:hover{
-      background-color: #F57D1F;
-      opacity: 1;
-      color: black;
-    }
+      .CardButton:hover {
+        background-color: #f57d1f;
+        opacity: 1;
+        color: black;
+      }
 
-    /* @keyframes colorChange{
+      .html-logo {
+        font-size: 150px;
+        color: #f57d1f;
+        margin: auto;
+      }
+
+      .css-logo {
+        font-size: 150px;
+        color: #f57d1f;
+        margin: auto;
+      }
+
+      .javascript-logo {
+        font-size: 150px;
+        color: #f57d1f;
+        margin: auto;
+      }
+
+      .react-logo {
+        font-size: 150px;
+        color: #f57d1f;
+        margin: auto;
+      }
+
+      .nodejs-logo {
+        font-size: 150px;
+        color: #f57d1f;
+        margin: auto;
+      }
+
+      .mobile-logo {
+        font-size: 25px;
+        color: #f57d1f;
+        padding: ;
+      }
+
+      .email-logo {
+        font-size: 25px;
+        color: #f57d1f;
+      }
+
+      .house-logo {
+        font-size: 25px;
+        color: #f57d1f;
+      }
+
+      .contactDetails ul li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .education-logo {
+        color: #f57d1f;
+        font-size: 40px;
+      }
+
+      .educationContainer .educationcols {
+        display: flex;
+        align-items: center;
+        gap: 10px ;
+        border: #f57d1f solid;
+        border-radius: 30px;
+        margin: auto;
+        padding: auto;
+        justify-content: center;
+      }
+
+      .CV {
+        text-decoration: none;
+        border: #f57d1f solid 2px;
+        border-radius: 20px;
+        font-size: medium;
+        color: white;
+        background-color: #f57d1f;
+        transition: 0.3s;
+      }
+
+      .CV:hover{
+        background-color: orange;
+      }
+
+
+
+      /* @keyframes colorChange{
       0% {
         color: #F57D1F;
       }
@@ -276,497 +371,604 @@
       }
     } */
 
-    
+      .col2:hover,
+      .col3:hover,
+      .col4:hover,
+      .col5:hover,
+      .col6:hover {
+        transform: translateY(-50px);
+        box-shadow: 4px 7px 7px 0 #f57d1f;
+      }
 
-    .col2:hover, .col3:hover, .col4:hover, .col5:hover, .col6:hover{
-      transform: translateY(-50px);
-      box-shadow: 4px 7px 7px 0 #F57D1F;
-    }
+      .h4ContactDetails::first-letter {
+        color: #f57d1f;
+        font-size: xx-large;
+      }
 
-    .h4ContactDetails::first-letter{
-      color: #F57D1F;
-      font-size: xx-large;
-    }
+      .hamburger {
+        display: none;
+        cursor: pointer;
+      }
 
-    .hamburger{
-      display: none;
-      cursor: pointer;
-    }
-
-    .bar{
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      background-color: black;
-    }
-
-    @media(max-width:768px){
-      .hamburger{
+      .bar {
         display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: black;
       }
 
-      .hamburger.active .bar:nth-child(2){
-        opacity: 0;
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .navItems {
+          position: fixed;
+          left: -100%;
+          top: 70px;
+          gap: 0;
+          flex-direction: column;
+          background-color: #f57d1f;
+          width: 100%;
+          text-align: center;
+          transition: 0.3s;
+        }
+
+        .navItem {
+          margin: 16px 0;
+        }
+
+        .navItems.active {
+          left: 0;
+        }
       }
 
-      .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-      }
-
-      .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-      }
-
-      .navItems {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #F57D1F;
-        width: 100%;
+      .Education {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         text-align: center;
-        transition: 0.3s;
+        font-family: "Times New Roman", Times, serif;
+        padding-top: 100px;
       }
 
-      .navItem{
-        margin: 16px 0;
+      .Education2 {
+        background-color: black;
+        border-style: none;
+        font-size: larger;
+        padding: 20px;
       }
 
-      .navItems.active{
-        left: 0;
+      .Education3 {
+        color: #f57d1f;
+        font-size: xx-large;
       }
-    }
 
-    .Education{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      text-align: center;
-      font-family: 'Times New Roman', Times, serif;
-      transition: 0.5s;
-      padding-top: 100px;
-    }
+      .Education4 {
+        color: white;
+      }
 
-    .Education2{
-      background-color: black;
-      border-style: none;
-      font-size: larger;
-      padding: 20px;
-    }
-
-    .Education3{
-      color: #F57D1F;
-      font-size: xx-large;
-    }
-
-    .Education4{
-      color: white;
-    }
-
-    .Education:hover{
+      /* .Education:hover{
       transform: translateY(-50px);
       box-shadow: 4px 7px 7px 0 #F57D1F;
-    }
-    
-    @media (max-width: 480px) {
-  .heading2AboutMe {
-    margin-top: 100px;
-    padding-top: 50px;
-  }
+    } */
 
-  #AboutMeParagraph {
-    height: auto;
-    width: 90%;
-    margin: auto;
-  }
+      .github-logo {
+        font-size: 50px;
+        color: #f57d1f;
+      }
 
-  .heroSectionPicture {
-    width: 90%;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 50px;
-  }
+      .linkedin-logo {
+        font-size: 50px;
+        color: #f57d1f;
+      }
 
-  .SkillsContainer {
-    flex-direction: column;
-    padding: 20px;
-  }
+      @media (max-width: 480px) {
+        .heading2AboutMe {
+          margin-top: 100px;
+          padding-top: 50px;
+        }
 
-  .SkillsContainer .col {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+        #AboutMeParagraph {
+          height: auto;
+          width: 90%;
+          margin: auto;
+        }
 
-  .ContactContainer1 {
-    flex-direction: column;
-  }
+        .heroSectionPicture {
+          width: 90%;
+          margin-left: 0;
+          padding-left: 0;
+          margin-top: 50px;
+        }
 
-  .formContainer,
-  .contactDetails {
-    width: 90%;
-    margin: auto;
-  }
+        .SkillsContainer {
+          flex-direction: column;
+          padding: 20px;
+        }
 
-  #header {
-    padding: 20px;
-  }
-}
+        .SkillsContainer .col {
+          width: 100%;
+          margin-bottom: 20px;
+        }
 
+        .ContactContainer1 {
+          flex-direction: column;
+        }
 
-@media (min-width: 481px) and (max-width: 768px) {
-  .heading2AboutMe {
-    margin-top: 200px;
-    padding-top: 50px;
-  }
+        .formContainer,
+        .contactDetails {
+          width: 90%;
+          margin: auto;
+        }
 
-  #AboutMeParagraph {
-    height: auto;
-    width: 80%;
-    margin: auto;
-  }
+        #header {
+          padding: 20px;
+        }
+      }
 
-  .heroSectionPicture {
-    width: 70%;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 50px;
-  }
+      @media (min-width: 481px) and (max-width: 768px) {
+        .heading2AboutMe {
+          margin-top: 200px;
+          padding-top: 50px;
+        }
 
-  .SkillsContainer {
-    flex-direction: column;
-    padding: 30px;
-  }
+        #AboutMeParagraph {
+          height: auto;
+          width: 80%;
+          margin: auto;
+        }
 
-  .SkillsContainer .col {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+        .heroSectionPicture {
+          width: 70%;
+          margin-left: 0;
+          padding-left: 0;
+          margin-top: 50px;
+        }
 
-  .ContactContainer1 {
-    flex-direction: column;
-  }
+        .SkillsContainer {
+          flex-direction: column;
+          padding: 30px;
+        }
 
-  .formContainer,
-  .contactDetails {
-    width: 80%;
-    margin: auto;
-  }
+        .SkillsContainer .col {
+          width: 100%;
+          margin-bottom: 20px;
+        }
 
-  #header {
-    padding: 30px;
-  }
-}
+        .ContactContainer1 {
+          flex-direction: column;
+        }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .heading2AboutMe {
-    margin-top: 300px;
-    padding-top: 70px;
-  }
+        .formContainer,
+        .contactDetails {
+          width: 80%;
+          margin: auto;
+        }
 
-  #AboutMeParagraph {
-    height: auto;
-    width: 70%;
-    margin: auto;
-  }
+        #header {
+          padding: 30px;
+        }
+      }
 
-  .heroSectionPicture {
-    width: 60%;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 70px;
-  }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .heading2AboutMe {
+          margin-top: 300px;
+          padding-top: 70px;
+        }
 
-  .SkillsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+        #AboutMeParagraph {
+          height: auto;
+          width: 70%;
+          margin: auto;
+        }
 
-  .SkillsContainer .col {
-    width: 45%;
-    margin-bottom: 20px;
-  }
+        .heroSectionPicture {
+          width: 60%;
+          margin-left: 0;
+          padding-left: 0;
+          margin-top: 70px;
+        }
 
-  .ContactContainer1 {
-    flex-direction: row;
-  }
+        .SkillsContainer {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
 
-  .formContainer,
-  .contactDetails {
-    width: 45%;
-  }
+        .SkillsContainer .col {
+          width: 45%;
+          margin-bottom: 20px;
+        }
 
-  #header {
-    padding: 40px;
-  }
-}
+        .ContactContainer1 {
+          flex-direction: row;
+        }
 
+        .formContainer,
+        .contactDetails {
+          width: 45%;
+        }
 
-@media (min-width: 1025px) and (max-width: 1200px) {
-  .heading2AboutMe {
-    margin-top: 350px;
-    padding-top: 80px;
-  }
+        #header {
+          padding: 40px;
+        }
+      }
 
-  #AboutMeParagraph {
-    height: auto;
-    width: 60%;
-    margin: auto;
-  }
+      @media (min-width: 1025px) and (max-width: 1200px) {
+        .heading2AboutMe {
+          margin-top: 350px;
+          padding-top: 80px;
+        }
 
-  .heroSectionPicture {
-    width: 50%;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 80px;
-  }
+        #AboutMeParagraph {
+          height: auto;
+          width: 60%;
+          margin: auto;
+        }
 
-  .SkillsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+        .heroSectionPicture {
+          width: 50%;
+          margin-left: 0;
+          padding-left: 0;
+          margin-top: 80px;
+        }
 
-  .SkillsContainer .col {
-    width: 30%;
-    margin-bottom: 20px;
-  }
+        .SkillsContainer {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
 
-  .ContactContainer1 {
-    flex-direction: row;
-  }
+        .SkillsContainer .col {
+          width: 30%;
+          margin-bottom: 20px;
+        }
 
-  .formContainer,
-  .contactDetails {
-    width: 45%;
-  }
+        .ContactContainer1 {
+          flex-direction: row;
+        }
 
-  #header {
-    padding: 40px;
-  }
-}
+        .formContainer,
+        .contactDetails {
+          width: 45%;
+        }
 
-@media (min-width: 1201px) {
-  .heading2AboutMe {
-    margin-top: 400px;
-    padding-top: 100px;
-  }
+        #header {
+          padding: 40px;
+        }
+      }
 
-  #AboutMeParagraph {
-    height: auto;
-    width: 50%;
-    margin: auto;
-  }
+      @media (min-width: 1201px) {
+        .heading2AboutMe {
+          margin-top: 200px;
+          padding-top: 100px;
+        }
 
-  .heroSectionPicture {
-    width: 40%;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 100px;
-  }
+        #AboutMeParagraph {
+          height: auto;
+          width: 50%;
+          margin: auto;
+        }
 
-  .SkillsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+        .heroSectionPicture {
+          width: 50%;
+          margin-left: 200px;
+          padding-left: 0;
+          margin-top: 175px;
+        }
 
-  .SkillsContainer .col {
-    width: 25%;
-    margin-bottom: 20px;
-  }
+        .SkillsContainer {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
 
-  .ContactContainer1 {
-    flex-direction: row;
-  }
+        .SkillsContainer .col {
+          width: 25%;
+          margin-bottom: 20px;
+        }
 
-  .formContainer,
-  .contactDetails {
-    width: 40%;
-  }
+        .ContactContainer1 {
+          flex-direction: row;
+        }
 
-  #header {
-    padding: 40px;
-  }
-}
+        .formContainer,
+        .contactDetails {
+          width: 40%;
+        }
 
-    
-  </style>
-</head>
-<body>
-  <div id="home"></div>
-  <!-- navBar Section -->
-  <div id="header"> 
-    <img src="https://cdn-icons-png.flaticon.com/512/3096/3096983.png" class="Logo" alt="Logo">
-    <ul class="navItems">
-      <li class="navItem"><a href="#home" class="item-link">Home</a></li>
-      <li class="navItem"><a href="#AboutMe" class="item-link">About me</a></li>
-      <li class="navItem"><a href="#Skills" class="item-link">Skills</a></li>
-      <li class="navItem"><a href="#Education" class="item-link">Education</a></li>
-      <li class="navItem"><a href="#Contact" class="item-link">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-  </div>
-
-  <!-- grid table with two columns + About Me Section -->
-  <div class="container">
-    <div class="row">
-      <div class="col1 col-sm">
-        <h1>Hi, I'm Abedelra'uof</h1>
-        <h2 class="heading2HeroSection">I'm a Full Stack Developer</h2>
-        <h4 >𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</h4>
-        <br><br><br>
-      </div>
-      <div class="Col2Picture col-sm">
-        <img class="heroSectionPicture" src="Images/Picture2-nobg.png" alt="Hero Section Picture">
-      </div>
-    </div>
-  </div> 
-
-
-
-  <div id="AboutMe" class="heading2AboutMe">
-    <h2 id="AboutMeSection">About Me</h2>
-    <div class="DivAboutMe">
-    <p id="AboutMeParagraph">Passionate about blending creativity with logic, I bring a unique perspective to problem-solving. With a background in Logistics and Supply Chain Management, I understand the complexities of efficient operations. Now, I am channeling my innovative spirit into programming. I am eager to combine my analytical skills and creativity to develop software solutions that are both functional and aesthetically pleasing.</p>
-    </div>
-  </div>
-
-
-
-
-
-  <!-- Skills cards Section -->
-
-  <div id="Skills" class="SkillsContainer container text-center">
-    <br><br><br><br>
-    <div class="col col-3">
-      <div class="col2 card" style="width: 18rem;">
-        <img src="https://cdn-icons-png.freepik.com/512/5968/5968333.png" class="card-img-top" alt="HTML Logo">
-        <div class="card-body">
-          <p class="card-text">The backbone of web development, HTML (Hypertext Markup Language) structures the content on the web. It allows for the creation of paragraphs, links, images, and more, serving as the skeleton of web pages.</p>
-          <a href="https://github.com/Abedelrauof-Yousef/HTML-Task.git" class="CardButton btn" target="_blank">See My Work</a>
-        </div>
-      </div>
-    </div>
-    <div class="col col-3">
-      <div class="col3 card" style="width: 18rem;">
-        <img src="https://cdn-icons-png.freepik.com/512/5968/5968305.png" class="card-img-top" alt="CSS Logo">
-        <div class="card-body">
-          <p class="card-text">CSS (Cascading Style Sheets) brings style to the web. It allows for the customization of web page appearances, including layouts, colors, and fonts, making websites visually appealing and user-friendly.</p>
-          <a href="https://github.com/Abedelrauof-Yousef/Bootstrap.git" class="CardButton btn" target="_blank">See My Work</a>
-        </div>
-      </div>
-    </div>
-    <div class="col col-3">
-      <div class="col4 card" style="width: 18rem;">
-        <img src="https://static.vecteezy.com/system/resources/previews/012/194/385/original/js-letter-logo-design-with-black-background-in-illustrator-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg" class="card-img-top" alt="JavaScript Logo">
-        <div class="card-body">
-          <h5 class="card-title">JavaScript</h5>
-          <p class="card-text">JavaScript adds interactivity to web pages. As a versatile programming language, it enables dynamic content, control of multimedia, and complex web features, enhancing the user experience significantly.</p>
-          <a href="#" class="CardButton btn">See My Work</a>
-        </div>
-      </div>
-    </div>
-    <div class="col col-3">
-      <div class="col5 card" style="width: 18rem;">
-        <img src="Images/React logo small.png" class="card-img-top" alt="React Logo">
-        <div class="card-body">
-          <h5 class="card-title">React</h5>
-          <p class="card-text">React is a powerful JavaScript library for building user interfaces, particularly single-page applications. It facilitates the creation of reusable UI components and ensures efficient rendering, making web apps fast and scalable.</p>
-          <a href="#" class="CardButton btn">See My Work</a>
-        </div>
-      </div>
-    </div>
-    <div class="col col-3">
-      <div class="col6 card" style="width: 18rem;">
-        <img src="https://icon-library.com/images/node-js-icon/node-js-icon-2.jpg" class="card-img-top" alt="Node.js Logo">
-        <div class="card-body">
-          <h5 class="card-title">Node.js</h5>
-          <p class="card-text">Node.js is a JavaScript runtime built on Chrome's V8 engine, allowing for server-side scripting. It enables the creation of scalable network applications, making it ideal for real-time applications and API services.</p>
-          <a href="#" class="CardButton btn">See My Work</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <br><br><br><br><br><br><br><br>
-
-  <!-- Education Section -->
-  <div id="Education" class="Education">
-    <div style="width: 18rem;">
-      <div class="Education2 card-body">
-        <h5 class="Education3 card-title">Education</h5>
-        <p class="Education4 card-text">Luminous Technical University College, an internationally accredited Diploma in Logistics granted by Pearson - United Kingdom, FullStack Developer Graduated from Orange Digital Village</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  
-  <div class="ContactContainer1">
-    <h3 id="Contact" class="h3Contact"></h3> 
-    <form class="formContainer">
-      <label for="firstName"></label>
-      <input type="text" id="firstName" name="firstName" placeholder="First Name"><br><br> 
-      <label for="lastName"></label>
-      <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br><br>
-      <label for="phoneNumber"></label>
-      <input type="tel" id="telNumber" name="telNumber" placeholder="Phone Number"><br><br>
-      <label for="subject">Message</label>
-      <textarea id="subject" name="subject" placeholder="Write Here" style="height:200px"></textarea>
-      <input type="submit" value="Submit">
-    </form>
-    <div class="contactDetails">
-      <h4 class="h4ContactDetails"><strong>Reach me</strong></h4>
-      <ul>
-        <li>Mobile Number: +962786000975</li>
-        <li>Email: abedelrauofyousef@gmail.com</li>
-        <li>Address: Zarqa/New Zarqa</li>
+        #header {
+          padding: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="home"></div>
+    <!-- navBar Section -->
+    <div id="header">
+      <a class="Logo" href="#">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</a>
+      <ul class="navItems">
+        <li class="navItem"><a href="#home" class="item-link">Home</a></li>
+        <li class="navItem">
+          <a href="#AboutMe" class="item-link">About me</a>
+        </li>
+        <li class="navItem"><a href="#Skills" class="item-link">Skills</a></li>
+        <li class="navItem">
+          <a href="#Education" class="item-link">Education</a>
+        </li>
+        <li class="navItem">
+          <a href="#Contact" class="item-link">Contact</a>
+        </li>
       </ul>
-      <div class="socialMedia">
-        <a href="https://www.linkedin.com/in/abed-alajawy-31b2b11a1/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png" alt="LinkedIn Logo">
-        </a>
-        <a href="https://github.com/Abedelrauof-Yousef" target="_blank">
-          <img src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" alt="GitHub Logo">
-        </a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
     </div>
-  </div>
 
-
-  <!-- Footer Section -->
-  <footer class="copyRight bg-body-tertiary text-center text-lg-start">
-    <div class="copyRight2 text-center p-3">
-      © 2020 Copyright:
-      <a class="text-body">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</a>
+    <!-- grid table with two columns + About Me Section -->
+    <div class="container">
+      <div class="row">
+        <div class="col1 col-sm">
+          <h1>Hi, I'm Abedelra'uof</h1>
+          <h2 class="heading2HeroSection">I'm a Full Stack Developer</h2>
+          <a class="CV" href="CV_Abdelrauof (2).pdf" download>Download My CV</a>
+          <br /><br /><br />
+        </div>
+        <div class="Col2Picture col-sm">
+          <img
+            class="heroSectionPicture"
+            src="Images/Picture2-nobg.png"
+            alt="Hero Section Picture"
+          />
+        </div>
+      </div>
     </div>
-  </footer>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navItems = document.querySelector(".navItems");
 
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navItems.classList.toggle("active");
-    });
+    <div id="AboutMe" class="heading2AboutMe">
+      <h2 id="AboutMeSection">About Me</h2>
+      <div class="DivAboutMe">
+        <p id="AboutMeParagraph">
+          Passionate about blending creativity with logic, I bring a unique
+          perspective to problem-solving. With a background in Logistics and
+          Supply Chain Management, I understand the complexities of efficient
+          operations. Now, I am channeling my innovative spirit into
+          programming. I am eager to combine my analytical skills and creativity
+          to develop software solutions that are both functional and
+          aesthetically pleasing.
+        </p>
+      </div>
+    </div>
 
-    document.querySelectorAll(".item-link").forEach(n => n.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navItems.classList.remove("active");
-    })) 
-  
-  </script>
-</body>
+    <!-- Skills cards Section -->
+
+    <div id="Skills" class="SkillsContainer container text-center">
+      <br /><br /><br /><br />
+      <div class="col col-3">
+        <div class="col2 card" style="width: 18rem">
+          <ion-icon name="logo-html5" class="html-logo"></ion-icon>
+          <div class="card-body">
+            <h5 class="card-title">HTML</h5>
+            <p class="card-text">
+              The backbone of web development, HTML (Hypertext Markup Language)
+              structures the content on the web. It allows for the creation of
+              paragraphs, links, images, and more, serving as the skeleton of
+              web pages.
+            </p>
+            <a
+              href="https://github.com/Abedelrauof-Yousef/HTML-Task.git"
+              class="CardButton btn"
+              target="_blank"
+              >See My Work</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="col3 card" style="width: 18rem">
+          <ion-icon name="logo-css3" class="css-logo"></ion-icon>
+          <div class="card-body">
+            <h5 class="card-title">CSS</h5>
+            <p class="card-text">
+              CSS (Cascading Style Sheets) brings style to the web. It allows
+              for the customization of web page appearances, including layouts,
+              colors, and fonts, making websites visually appealing and
+              user-friendly.
+            </p>
+            <a
+              href="https://github.com/Abedelrauof-Yousef/Bootstrap.git"
+              class="CardButton btn"
+              target="_blank"
+              >See My Work</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="col4 card" style="width: 18rem">
+          <ion-icon name="logo-javascript" class="javascript-logo"></ion-icon>
+          <div class="card-body">
+            <h5 class="card-title">JavaScript</h5>
+            <p class="card-text">
+              JavaScript adds interactivity to web pages. As a versatile
+              programming language, it enables dynamic content, control of
+              multimedia, and complex web features, enhancing the user
+              experience significantly.
+            </p>
+            <a href="#" class="CardButton btn">See My Work</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="col5 card" style="width: 18rem">
+          <ion-icon name="logo-react" class="react-logo"></ion-icon>
+          <div class="card-body">
+            <h5 class="card-title">React</h5>
+            <p class="card-text">
+              React is a powerful JavaScript library for building user
+              interfaces, particularly single-page applications. It facilitates
+              the creation of reusable UI components and ensures efficient
+              rendering, making web apps fast and scalable.
+            </p>
+            <a href="#" class="CardButton btn">See My Work</a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-3">
+        <div class="col6 card" style="width: 18rem">
+          <ion-icon name="logo-nodejs" class="nodejs-logo"></ion-icon>
+          <div class="card-body">
+            <h5 class="card-title">Node.js</h5>
+            <p class="card-text">
+              Node.js is a JavaScript runtime built on Chrome's V8 engine,
+              allowing for server-side scripting. It enables the creation of
+              scalable network applications, making it ideal for real-time
+              applications and API services.
+            </p>
+            <a href="#" class="CardButton btn">See My Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Education" ></div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+    <!-- Education Section -->
+    <div id="Education" ></div>
+    <div class="educationContainer container text-center">
+      <h2>Education</h2>
+      <div class="row row-cols-2">
+        <div class="educationcols col"> <ion-icon name="school-outline" class="education-logo" ></ion-icon>
+          an internationally accredited Diploma in Logistics granted by Pearson
+        </div>
+        <div class="educationcols col"> <ion-icon name="school-outline" class="education-logo" ></ion-icon>
+          a Full stack developer in web granted by Orange coding Academy
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+
+    <div class="ContactContainer1">
+      <h3 id="Contact" class="h3Contact"></h3>
+      <form class="formContainer">
+        <label for="firstName"></label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First Name"
+        /><br /><br />
+        <label for="lastName"></label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last Name"
+        /><br /><br />
+        <label for="phoneNumber"></label>
+        <input
+          type="tel"
+          id="telNumber"
+          name="telNumber"
+          placeholder="Phone Number"
+        /><br /><br />
+        <label for="subject">Message</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write Here"
+          style="height: 200px"
+        ></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+      <div class="contactDetails">
+        <h4 class="h4ContactDetails"><strong>Reach me out!</strong></h4>
+        <ul>
+          <li>
+            <ion-icon name="call-outline" class="mobile-logo"></ion-icon> Mobile
+            Number: +962786000975
+          </li>
+          <li>
+            <ion-icon name="mail-outline" class="email-logo"></ion-icon> Email:
+            abedelrauofyousef@gmail.com
+          </li>
+          <li>
+            <ion-icon name="home-outline" class="house-logo"></ion-icon>
+            Address: Zarqa/New Zarqa
+          </li>
+        </ul>
+        <div class="socialMedia">
+          <a
+            href="https://www.linkedin.com/in/abed-alajawy-31b2b11a1/"
+            target="_blank"
+          >
+            <ion-icon name="logo-linkedin" class="linkedin-logo"></ion-icon>
+          </a>
+          <a href="https://github.com/Abedelrauof-Yousef" target="_blank">
+            <ion-icon name="logo-github" class="github-logo"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="copyRight bg-body-tertiary text-center text-lg-start">
+      <div class="copyRight2 text-center p-3">
+        © 2020 Copyright:
+        <a class="text-body">𝓐𝓫𝓮𝓭𝓮𝓵𝓻𝓪'𝓾𝓸𝓯</a>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navItems = document.querySelector(".navItems");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navItems.classList.toggle("active");
+      });
+
+      document.querySelectorAll(".item-link").forEach((n) =>
+        n.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navItems.classList.remove("active");
+        })
+      );
+    </script>
+  </body>
 </html>
